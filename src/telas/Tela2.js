@@ -21,6 +21,9 @@ const Tela2 = (props) =>{
     const proxPag5 = () => {
         props.navigation.navigate('NovaPesquisa')
     }
+    const proxPag6 = () => {
+        props.navigate('index')
+    }
 
 
     return(
@@ -32,6 +35,7 @@ const Tela2 = (props) =>{
             <Button title="relatorio" onPress={proxPag3}/>
             <Button title="NovaConta" onPress={proxPag4}/>
             <Button title="NovaPesquisa" onPress={proxPag5}/>
+            <Button title="index" onPress={proxPag6}/>
 
         </View>
     )

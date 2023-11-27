@@ -9,6 +9,9 @@ import Relatorio from "./src/telas/Relatorio"
 import NovaConta from "./src/telas/NovaConta"
 import NovaPesquisa from "./src/telas/NovaPesquisa";
 import LoginScreen from "./src/telas/Login";
+import Home from "./src/telas/Home";
+import Coleta from './src/telas/Coleta'
+import AcoesPesquisa from "./src/telas/AcoesPesquisa";
 
 const Stack = createStackNavigator()
 
@@ -24,7 +27,10 @@ const App = () => {
                     <Stack.Screen name="TelaTeste" component={TelaTeste} />
                     <Stack.Screen name="Relatorio" component={Relatorio}/>
                     <Stack.Screen name="NovaPesquisa" component={NovaPesquisa}/>
-                    <Stack.Screen options={{headerShown:false}} name="Login" component={LoginScreen}/>                  
+                    <Stack.Screen name="Home" component={Home}/>
+                    <Stack.Screen name="Coleta" component={Coleta}/>
+                    <Stack.Screen name="AcoesPesquisa" component={AcoesPesquisa}/>
+                    <Stack.Screen options={{headerShown:true}} name="Login" component={LoginScreen}/>                  
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>

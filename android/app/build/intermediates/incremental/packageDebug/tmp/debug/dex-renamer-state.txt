@@ -1,15 +1,15 @@
-#Thu Sep 28 17:31:23 BRT 2023
-base.0=C\:\\Users\\danie\\exemplo\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\danie\\exemplo\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\danie\\exemplo\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.3=C\:\\Users\\danie\\exemplo\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.4=C\:\\Users\\danie\\exemplo\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
-base.5=C\:\\Users\\danie\\exemplo\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Sun Nov 26 22:33:03 BRT 2023
+base.0=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
+base.2=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.3=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.4=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.5=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
-path.2=14/classes.dex
-path.3=7/classes.dex
-path.4=0/classes.dex
+path.2=0/classes.dex
+path.3=14/classes.dex
+path.4=7/classes.dex
 path.5=classes2.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex

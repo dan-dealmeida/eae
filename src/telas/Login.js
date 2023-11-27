@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, TextInput, Button, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth_mod } from '../Firebase/conf';
-import { useDispatch} from "react-redux"
-import { reducerSetId } from '../../redux/uidSlice';
-import { configureLayoutAnimations } from 'react-native-reanimated/lib/typescript/reanimated2/core';
+import {signInWithEmailAndPassword} from 'firebase/auth';
+import {auth_mod} from '../Firebase/conf';
+import {useDispatch} from 'react-redux';
+import {reducerSetId} from '../../redux/uidSlice';
+import {configureLayoutAnimations} from 'react-native-reanimated/lib/typescript/reanimated2/core';
 
-
-const LoginScreen = (props) => {
+const LoginScreen = props => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isEmailValid, setIsEmailValid] = useState(true);
 
-  const dispatch  = useDispatch()
+  const dispatch = useDispatch();
 
   const validateEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -25,24 +24,26 @@ const LoginScreen = (props) => {
   const handleLogin = () => {
     if (validateEmail()) {
       signInWithEmailAndPassword(auth_mod, email, password)
-        .then((user) => {
-          dispatch(reducerSetId({
-            uid: auth_mod.currentUser.uid
-          }))
-          props.navigation.navigate('TelaTeste')
+        .then(user => {
+          dispatch(
+            reducerSetId({
+              uid: auth_mod.currentUser.uid,
+            }),
+          );
+          props.navigation.replace('AcoesPesquisa');
         })
-        .catch((error) =>{
-          console.log(error)
-        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   };
 
   const handleForgotPassword = () => {
-    props.navigation.navigate('RecuperarSenha')
+    props.navigation.navigate('RecuperarSenha');
   };
 
   const handleCreateAccount = () => {
-    props.navigation.navigate('NovaConta')
+    props.navigation.navigate('NovaConta');
   };
 
   return (
@@ -59,7 +60,9 @@ const LoginScreen = (props) => {
           style={[styles.input, !isEmailValid && styles.inputError]}
         />
         {!isEmailValid && (
-          <Text style={styles.errorText}>Por favor, insira um email válido.</Text>
+          <Text style={styles.errorText}>
+            Por favor, insira um email válido.
+          </Text>
         )}
         <TextInput
           placeholder="Senha"
@@ -69,11 +72,7 @@ const LoginScreen = (props) => {
           style={styles.input}
         />
         <View style={styles.buttonContainer}>
-          <Button
-            title="Entrar"
-            onPress={handleLogin}
-            color="#37BD6D"
-          />
+          <Button title="Entrar" onPress={handleLogin} color="#37BD6D" />
         </View>
         <View style={styles.buttonContainer2}>
           <Button
@@ -102,14 +101,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#372775',
   },
   headerContainer: {
-    flexDirection: 'row', 
-    alignItems: 'center', 
+    flexDirection: 'row',
+    alignItems: 'center',
     marginBottom: 20,
   },
   headerText: {
     fontSize: 24,
     color: 'white',
-    marginRight: 10, 
+    marginRight: 10,
     fontFamily: 'AveriaLibre-Bold',
   },
   input: {
