@@ -25,16 +25,18 @@ const Home = props => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userCollectionRef = collection(db, uid); // Nome da coleção é o UID do usuário
+        const userCollectionRef = collection(db, uid);
         const querySnapshot = await getDocs(userCollectionRef);
 
         const cardsData = [];
         querySnapshot.forEach(doc => {
+          console.log('opa');
+          console.log(doc.data());
           const card = doc.data();
           cardsData.push(card);
         });
 
-        setUserCards(cardsData); // Atualiza o estado com os cards do usuário
+        setUserCards(cardsData);
       } catch (error) {
         console.error('Erro ao buscar os cards:', error);
       }
@@ -45,6 +47,12 @@ const Home = props => {
 
   const irNovaPesquisa = () => {
     props.navigation.navigate('NovaPesquisa');
+  };
+
+  const irDetalhesDoCard = card => {
+    props.navigation.navigate('AcoesPesquisa', {
+      card,
+    });
   };
 
   return (
@@ -64,7 +72,16 @@ const Home = props => {
       <View style={{height: windowHeith * 0.7, overflow: 'hidden'}}>
         <ScrollView>
           {userCards.map((card, index) => (
-            <Card key={index} texto={card.Pesquisa} data={card.Data} />
+            <TouchableOpacity
+              key={index}
+              onPress={() => irDetalhesDoCard(card)}>
+              <Card
+                key={index}
+                texto={card.Pesquisa}
+                data={card.Data}
+                docRef={card.DocRef}
+              />
+            </TouchableOpacity>
           ))}
         </ScrollView>
       </View>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, Button, StyleSheet} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/MaterialIcons'
 import {signInWithEmailAndPassword} from 'firebase/auth';
 import {auth_mod} from '../Firebase/conf';
 import {useDispatch} from 'react-redux';
@@ -30,7 +30,7 @@ const LoginScreen = props => {
               uid: auth_mod.currentUser.uid,
             }),
           );
-          props.navigation.replace('AcoesPesquisa');
+          props.navigation.replace('Home');
         })
         .catch(error => {
           console.log(error);

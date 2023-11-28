@@ -1,19 +1,22 @@
-#Sun Nov 26 22:33:03 BRT 2023
+#Mon Nov 27 18:08:12 BRT 2023
 base.0=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
 base.2=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.3=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
 base.4=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 base.5=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.6=E\:\\U\\UTFPR\\7 periodo\\Mobile\\New folder (2)\\mobile.sus\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=0/classes.dex
 path.3=14/classes.dex
 path.4=7/classes.dex
 path.5=classes2.dex
+path.6=classes3.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex
 renamed.5=classes6.dex
+renamed.6=classes7.dex

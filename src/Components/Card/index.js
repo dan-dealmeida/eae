@@ -1,11 +1,11 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
-// eslint-disable-next-line no-unused-vars
 import React, {Component} from 'react';
 
-const Card = (props) => {
+const Card = props => {
   const texto = props.texto;
   const data = props.data;
   const imagemUrl = props.imagemUrl;
+  const DocRef = props.docRef;
 
   return (
     <View style={estilo.view}>

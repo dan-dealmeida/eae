@@ -1,27 +1,15 @@
-import {
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-  Platform,
-  Button,
-  Image,
-} from 'react-native';
+import {View, Text, TextInput, StyleSheet} from 'react-native';
 import Botao from '../Components/Botao';
 import React, {useState} from 'react';
-import DateTimePicker from '@react-native-community/datetimepicker';
-import {doc, setDoc} from 'firebase/firestore';
+import {doc, setDoc, collection} from 'firebase/firestore';
 import {db} from '../Firebase/conf';
 import {useSelector} from 'react-redux';
 
-const NovaPesquisa = (props) => {
+const NovaPesquisa = props => {
   const [timeData, setTimeData] = useState(new Date());
-  const [showDatePicker, setShowDatePicker] = useState(false);
-  const [imagem, setImagem] = useState(null);
 
   const [txtNome, setNome] = useState('');
   const [Imag, setImg] = useState('');
-  const [Cadastrar, setcadastro] = useState('');
   const [alertaNome, setalertaNome] = useState('');
   const [alertaData, setalertaData] = useState('');
   const [alertaImg, setAlertaImg] = useState('');
@@ -38,16 +26,26 @@ const NovaPesquisa = (props) => {
       setalertaData('');
       setAlertaImg('Colocar a imagem');
     } else {
-      await setDoc(doc(db, uid, txtNome), {
-        Pesquisa: txtNome,
-        Data: timeData,
-        ImgUrl: Imag,
-      }).then(() => {
+      try {
+        const colecao = collection(db, uid);
+        const novoDocRef = doc(colecao);
+
+        const novoDocumento = {
+          Pesquisa: txtNome,
+          Data: timeData,
+          ImgUrl: Imag,
+          DocRef: novoDocRef.id,
+        };
+
+        await setDoc(novoDocRef, novoDocumento);
+
         setNome('');
         setTimeData('');
         setImg('');
         props.navigation.replace('Home');
-      });
+      } catch (error) {
+        console.error('Erro ao adicionar documento:', error);
+      }
     }
   };
 

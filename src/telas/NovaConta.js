@@ -28,7 +28,7 @@ const NovaConta = props => {
               uid: auth_mod.currentUser.uid,
             }),
           );
-          props.navigation.navigate('TelaTeste');
+          props.navigation.navigate('Home');
         })
         .catch(error => {
           console.log(error);
